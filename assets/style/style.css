@@ -19,7 +19,6 @@ body {
 .list-box {
     background-color: var(--foreground);
     margin-left: .5em;
-    height: 80dvh;
 }
 
 button {
