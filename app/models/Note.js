@@ -23,4 +23,32 @@ export class Note {
       </div>
         `
     }
+
+    get notesListTemplate() {
+        return /*html*/ `
+        <div class="row justify-content-between">
+            <div class="col-4 list-box">
+                <p class=" d-flex justify-content-end"># of Jots</p>
+                <p>Add a Jot</p>
+            <div class="d-flex">
+                <label for="ColorInput">Color Picker</label>
+                <input type="color" class="form-control form-control-color" id="userColorInput" value="${this.color}"
+                title="Choose your note color">
+                <label for="note-title"></label>
+                <input class="ms-3" type="text" minlength="3" maxlength="15">
+                <button>Create <i class="mdi mdi-plus"></i></button>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-12 list-box-contents">
+                    <div>
+                        <div class="d-flex justify-content-between">
+                        <h4>${this.title}</h4><span>${this.createdAt}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `
+    }
 }

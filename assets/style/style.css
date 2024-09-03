@@ -21,6 +21,11 @@ body {
     margin-left: .5em;
 }
 
+.list-box-contents {
+    background-color: #393c75;
+    margin: .85em;
+}
+
 button {
     max-height: 3em;
     margin: 1em;

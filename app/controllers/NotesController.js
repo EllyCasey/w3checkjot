@@ -5,6 +5,7 @@ export class NotesController {
     constructor() {
         console.log('Notes Controller is loaded');
         this.drawActiveNote()
+        this.drawNotesList()
     }
 
     drawActiveNote() {
@@ -12,5 +13,12 @@ export class NotesController {
         let userNotes = '';
         notes.forEach((note) => userNotes += note.notesHTMLTemplate)
         setHTML('userNote', userNotes)
+    }
+
+    drawNotesList() {
+        const notes = AppState.notes
+        let notesList = ''
+        notes.forEach((note) => notesList += note.notesListTemplate)
+
     }
 }
